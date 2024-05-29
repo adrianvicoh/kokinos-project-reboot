@@ -1,0 +1,23 @@
+---
+import Base from "../templates/Base.astro";
+import Llibre from "../templates/Llibre.astro";
+import llibres from "../database/llibres.json";
+---
+
+<Base>
+	<div class="row">
+		<div class="col-12 topHeader"></div>
+	</div>
+	<div class="row"></div>
+	<div class="row">
+		{
+			llibres.map((llibre) => (
+				<Llibre
+					titol={llibre.titol}
+					autor={llibre.autor}
+					image={llibre.image}
+				/>
+			))
+		}
+	</div>
+</Base>
