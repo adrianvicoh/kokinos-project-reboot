@@ -1,10 +1,16 @@
 ---
-let {titol, autor, image} = Astro.props
+let { titol, autor, image } = Astro.props;
 ---
+
+<style>
+    h1 {
+
+    }
+</style>
 
 <div class="col-3">
     <div class="card customCard">
-        <img src={image} class="card-img-top" alt="imagenLibro">
+        <img src={image} class="card-img-top" alt="imagenLibro" />
         <div class="card-body">
             <h5 class="card-title">
                 {titol}
